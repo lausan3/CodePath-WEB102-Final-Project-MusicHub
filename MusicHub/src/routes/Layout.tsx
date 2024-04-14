@@ -1,14 +1,17 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import TopNav from "../components/TopNav";
+import Sidebar from "../components/Sidebar";
 
 const Layout = () => {
-
   return (
-    <div className="layout">
+    <>
       <TopNav />
-      <Outlet />
-    </div>
+      <div className="layout">
+        <Sidebar />
+        <Outlet />
+      </div>
+    </>
   )
 }
 
