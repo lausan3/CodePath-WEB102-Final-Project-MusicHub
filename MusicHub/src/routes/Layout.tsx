@@ -1,17 +1,24 @@
 import { Outlet } from "react-router-dom";
+import { useState } from "react";
+import { ThemeProvider } from "../contexts/theme-context";
 
-import TopNav from "../components/TopNav";
 import Sidebar from "../components/Sidebar";
+import MiniSidebar from "../components/MiniSidebar";
+import Header from "../components/Header";
 
 const Layout = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
-    <>
-      <TopNav />
+    <ThemeProvider>      
       <div className="layout">
-        <Sidebar />
-        <Outlet />
+        <Header showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+        <div className="layout-bottom">
+          {showSidebar === true ? <Sidebar /> : <MiniSidebar/>}
+          <Outlet />
+        </div>
       </div>
-    </>
+    </ThemeProvider>
   )
 }
 

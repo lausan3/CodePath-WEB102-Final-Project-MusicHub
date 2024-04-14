@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import App from './App.tsx'
+import Home from './routes/Home.tsx'
 import './index.css'
 
 // Routes
@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route index={true} element={<App/>} />
+          <Route index={true} element={<Home/>} />
         </Route>
       </Routes>
     </BrowserRouter>

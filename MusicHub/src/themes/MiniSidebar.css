@@ -1,0 +1,14 @@
+.mini-sidebar {
+  width: 80px;
+}
+
+.mini-sidebar-link {
+  display: block;
+
+  padding: 15px 0px;
+  margin: 10px 10px;
+  border-radius: 10px;
+
+  transition: 
+    background-color 250ms;
+}
