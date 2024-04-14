@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--background-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,7 +13,35 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+/* Light Theme */
+:root.light {
+  --background-primary: #ffffff;
+  --background-secondary: #f2f2f2;
+  --background-tertiary: #e6e6e6;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+}
+
+/* Dark Theme */
+:root.dark {
+  --background-primary: #333333;
+  --background-secondary: #2c2c2c;
+  --background-tertiary: #262626;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+}
+
+@media (color-scheme: dark) {
+  :root {
+    --background-primary: #333333;
+    --background-secondary: #2c2c2c;
+    --background-tertiary: #262626;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+  }
+}
+
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -65,4 +93,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
