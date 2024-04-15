@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -19,16 +19,16 @@
   --background-secondary: #CDC1FF;
   --background-tertiary: #7371FC;
   --text-primary: #0D1821;
-  --text-secondary: rgb(185, 185, 185);
+  --text-secondary: rgb(88, 88, 88);
 }
 
 /* Dark Theme */
 .dark {
-  --background-primary: #333333;
-  --background-secondary: #2c2c2c;
-  --background-tertiary: #262626;
-  --text-primary: #ffffff;
-  --text-secondary: #cccccc;
+  --background-primary: #665689;
+  --background-secondary: rgb(166, 156, 209);
+  --background-tertiary: #7371FC;
+  --text-primary: #eddbf1;
+  --text-secondary: rgb(194, 178, 197);
 }
 
 @media (color-scheme: dark) {
@@ -50,17 +50,20 @@ a:hover {
   color: var(--text-secondary);
 }
 
+* {
+  transition: 
+    background-color 250ms;
+}
+
 
 /* OLD VITE STUFF */
-/*
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
+/*
 
 h1 {
   font-size: 3.2em;

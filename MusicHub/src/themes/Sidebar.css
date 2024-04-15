@@ -3,19 +3,28 @@
 }
 
 .sidebar-link {
-  display: block;
+  display: flex;
+  padding: 20px 15px;
+  margin: 5px 15px;
 
-  padding: 15px 10px;
-  margin: 10px 10px;
   border-radius: 10px;
+
+  text-align: left;
 
   transition: 
     background-color 250ms;
 }
 
 .sidebar-link:hover, .mini-sidebar-link:hover {
-  color: white;
+  color: var(--text-secondary);
   background-color: rgba(255, 255, 255, 0.216);
+}
+
+.sidebar-link-text {
+  margin-left: 20px;
+  height: 4vh;
+
+  font-size: large;
 }
 
 .sidebar-btn {
@@ -23,7 +32,7 @@
   height: 50px;
   width: 50px;
   justify-content: center;
-  overflow: visible;
+  align-items: center;
 
   background: var(--background-primary);
   border: none;

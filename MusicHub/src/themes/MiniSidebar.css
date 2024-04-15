@@ -1,14 +1,16 @@
 .mini-sidebar {
-  width: 80px;
+  width: 90px;
 }
 
 .mini-sidebar-link {
-  display: block;
+  display: flex;
+  height: 4vh;
 
-  padding: 15px 0px;
-  margin: 10px 10px;
+  padding: 20px 15px;
+  margin: 5px 15px;
+
   border-radius: 10px;
-
+  
   transition: 
     background-color 250ms;
 }

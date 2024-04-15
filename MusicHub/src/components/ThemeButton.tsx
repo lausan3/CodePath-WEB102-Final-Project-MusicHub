@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTheme } from "../contexts/theme-context";
 import "./../themes/ThemeButton.css"
 
@@ -36,11 +36,12 @@ const ThemeButton = ({}: props) => {
       {
         theme === 'light' ? 
         <FontAwesomeIcon 
-          className="invert"
+          className="theme-btn-icon"
           icon="sun"
         />
         :
-        <FontAwesomeIcon 
+        <FontAwesomeIcon
+          className="theme-btn-icon" 
           icon="moon"
         />
       }

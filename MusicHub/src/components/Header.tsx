@@ -3,6 +3,7 @@ import { SetStateAction } from "react";
 import ThemeButton from "./ThemeButton";
 import ShowSidebarButton from "./ShowSidebarButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import './../themes/Header.css'
 
 interface props {
   showSidebar: boolean,
@@ -17,8 +18,9 @@ const Header = ({showSidebar, setShowSidebar}: props) => {
       <ShowSidebarButton onClick={() => setShowSidebar(!showSidebar)}/>
       <FontAwesomeIcon 
         icon="record-vinyl" 
-        className="record"
-      />
+        className="header-btn"
+        />
+      <h2>Music Hub</h2>
       <ThemeButton/>
     </header>
   )
