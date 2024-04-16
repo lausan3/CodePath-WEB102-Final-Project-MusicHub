@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './../themes/MiniSidebar.css'
-import ThemeButton from './ThemeButton'
 
 const MiniSidebar = () => {
   return (
@@ -12,11 +11,9 @@ const MiniSidebar = () => {
       <Link className='mini-sidebar-link' to='/create'>
         <FontAwesomeIcon icon="plus" className='sidebar-icon'/>
       </Link>
-      <Link className='mini-sidebar-link' to='/list'>
+      <Link className='mini-sidebar-link' to='/explore'>
         <FontAwesomeIcon icon="magnifying-glass" className='sidebar-icon'/>
       </Link>
-
-      <ThemeButton/>
     </div>
   )
 }

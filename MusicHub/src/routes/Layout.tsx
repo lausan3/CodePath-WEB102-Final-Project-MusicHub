@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import { ThemeProvider } from "../contexts/theme-context";
+import "./../App.css"
 
 import Sidebar from "../components/Sidebar";
 import MiniSidebar from "../components/MiniSidebar";

@@ -19,14 +19,14 @@
   --background-secondary: #CDC1FF;
   --background-tertiary: #7371FC;
   --text-primary: #0D1821;
-  --text-secondary: rgb(88, 88, 88);
+  --text-secondary: rgb(71, 26, 26);
 }
 
 /* Dark Theme */
 .dark {
   --background-primary: #665689;
-  --background-secondary: rgb(166, 156, 209);
-  --background-tertiary: #7371FC;
+  --background-secondary: rgb(128, 114, 190);
+  --background-tertiary: #9391e9;
   --text-primary: #eddbf1;
   --text-secondary: rgb(194, 178, 197);
 }
@@ -58,12 +58,12 @@ a:hover {
 
 /* OLD VITE STUFF */
 
-body {
+/* body {
   margin: 0;
   display: flex;
   place-items: center;
 }
-/*
+
 
 h1 {
   font-size: 3.2em;

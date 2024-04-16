@@ -14,3 +14,7 @@
   transition: 
     background-color 250ms;
 }
+
+.mini-sidebar-link:hover {
+  background-color: var(--background-secondary);
+}
