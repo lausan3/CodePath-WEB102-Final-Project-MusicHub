@@ -5,7 +5,7 @@ type Props = {}
 
 const Forum = ({}: Props) => {
   return (
-    <div className="main-ctn">
+    <div className="main-ctn center">
       <h1>Forum</h1>
     </div>
   )

@@ -2,37 +2,47 @@ import { supabase } from "../client"
 import { useState } from "react"
 
 import PostForm from "../components/PostForm"
-import { handleChange, handleOptionChange } from "../utils/utils"
+import { PostData } from "../utils/interface";
+import { handleChange } from "../utils/utils";
 
 const CreatePost = () => {
-  const [formData, setFormData] = useState({name: "", description: ""});
-  const [selectedOption, setSelectedOption] = useState("");
+  const [formData, setFormData] = useState<PostData>({poster_name: "", title: "", body: "", spotify_link: "", upvotes: 0});
 
   const createPost = async (event: React.MouseEvent<HTMLInputElement>) => {
     event.preventDefault();
 
-    const insertData: { name?: string; description?: string; role?: string } = {};
-
-    if (formData.name !== "") {
-      insertData.name = formData.name;
+    const insertData: {poster_name?: string, title?: string, body?: string, spotify_link?: string, upvotes?: number} = {upvotes: 0};
+    
+    if (formData.title !== "") {
+      insertData.title = formData.title
+    } else {
+      alert("You must enter a title for your post");
+      return;
     }
-
-    if (formData.description !== "") {
-      insertData.description = formData.description;
+    
+    if (formData.body !== "") {
+      insertData.body = formData.body;
+    } else {
+      alert("You must enter a body for your post");
+      return;
     }
-
-    if (selectedOption !== "") {
-      insertData.role = selectedOption;
+    
+    if (formData.poster_name !== "") {
+      insertData.poster_name = formData.poster_name;
     }
-
+    
+    if (formData.spotify_link !== "") {
+      insertData.spotify_link = formData.spotify_link;
+    }
+    
+    console.log(insertData);
+    
     await supabase
-      .from('Agents')
+      .from('Posts')
       .insert(insertData)
       .select();
 
-    alert("Successfully created an agent!");
-
-    window.location.reload();
+    alert("Successfully created a post!");
   }
 
   return (
@@ -40,9 +50,7 @@ const CreatePost = () => {
       <h1>Create Post</h1>
       <PostForm 
         data={formData} 
-        selectedOption={selectedOption} 
         handleChange={(event) => handleChange(event, setFormData)}
-        handleOptionChange={(event) => handleOptionChange(event, setSelectedOption)}
         submit={createPost}
       />
     </div>

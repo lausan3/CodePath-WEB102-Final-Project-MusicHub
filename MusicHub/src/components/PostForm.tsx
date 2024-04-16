@@ -1,77 +1,55 @@
-interface AgentFormProps {
+interface PostFormProps {
   data: any;
-  selectedOption: string;
   handleChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  handleOptionChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   submit: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void;
 }
-
-const PostForm = ({data, selectedOption, handleChange, handleOptionChange, submit}: AgentFormProps) => {
+// Style like this: https://elementor.com/blog/wp-content/uploads/elementor/thumbs/presidio-booking-form-example-p6kr1nl14nvjk8eel8hwrfn1uc2wwg1np4fb5oez7g.png
+const PostForm = ({data, handleChange, submit}: PostFormProps) => {
   return (
     <form className='create-form'>
-      <label htmlFor="title">Title</label><br />
-      <input type="text" id="title" name="name" value={data.name} onChange={handleChange} />
+      <input 
+        type="text" 
+        id="poster_name" 
+        name="poster_name" 
+        value={data.poster_name} 
+        onChange={handleChange} 
+        placeholder="Enter your name (optional)"
+      />
       <br/>
       <br/>
 
-      <label htmlFor="body">Body</label><br />
-      <textarea rows={5} cols={50} name="body" value={data.description} onChange={handleChange}>
-      </textarea>
+
+      <input 
+        type="text" 
+        id="title" 
+        name="title" 
+        value={data.title} 
+        onChange={handleChange} 
+        placeholder="Enter a title"
+      />
+      <br/>
+      <br/>
+
+      <textarea 
+        rows={5} 
+        cols={50} 
+        name="body" 
+        value={data.body} 
+        onChange={handleChange}
+        placeholder="Text (required)"
+        />
       <br/>
       
-      <div className="create-form-role">
+      <input 
+        type="text" 
+        id="spotify_link" 
+        name="spotify_link" 
+        value={data.spotify_link} 
+        onChange={handleChange} 
+        placeholder="Enter a Spotify Song Link (optional)"
+      />
+      <br/>
 
-        <div>
-          <input
-            className="create-form-role-radio"
-            id="duelist"
-            type="radio"
-            name="role"
-            value="Duelist"
-            checked={selectedOption === 'Duelist'}
-            onChange={handleOptionChange}
-          />
-          <label className="create-form-role-label" htmlFor="duelist">Duelist</label>
-        </div>
-        <div>
-          <input
-            className="create-form-role-radio"
-            id="initiator"
-            type="radio"
-            name="role"
-            value="Initiator"
-            checked={selectedOption === 'Initiator'}
-            onChange={handleOptionChange}
-          />
-          <label className="create-form-role-label" htmlFor="initiator">Initiator</label>
-        </div>
-        <div>
-          <input
-            className="create-form-role-radio"
-            id="controller"
-            type="radio"
-            name="role"
-            value="Controller"
-            checked={selectedOption === 'Controller'}
-            onChange={handleOptionChange}
-          />
-          <label className="create-form-role-label" htmlFor="controller">Controller</label>
-        </div>
-        <div>
-
-          <input
-            className="create-form-role-radio"
-            id="sentinel"
-            type="radio"
-            name="role"
-            value="Sentinel"
-            checked={selectedOption === 'Sentinel'}
-            onChange={handleOptionChange}
-          />
-          <label className="create-form-role-label" htmlFor="sentinel">Sentinel</label>
-        </div>
-
-      </div>
 
       <input type="submit" value="Submit" onClick={submit} />
     </form>

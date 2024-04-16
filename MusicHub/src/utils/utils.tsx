@@ -3,6 +3,8 @@ export const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>, s
 };
 
 export const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, set: React.Dispatch<React.SetStateAction<any>>) => {
+  console.log(event.target.value)
+  
   const {name, value} = event.target;
   set( (prev: any) => {
     return {

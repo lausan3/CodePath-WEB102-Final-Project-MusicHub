@@ -8,7 +8,7 @@
 }
 
 :root {
-  --main-container-width: 100px;
+  --main-container-width: calc(100vw - var(--sidebar-width) - 150px);
 }
 
 .layout {
@@ -62,4 +62,9 @@
 
 .fade-in {
   animation: fadeIn 250ms ease-in-out forwards;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
 }
