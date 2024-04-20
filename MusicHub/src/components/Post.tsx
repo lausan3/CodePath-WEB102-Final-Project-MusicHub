@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 import './../themes/Post.css';
-import SpotifyOEmbed from "./SpotifyOEmbed";
+// import SpotifyOEmbed from "./SpotifyOEmbed";
 import { formatDate } from '../utils/utils';
 
 interface props {
@@ -53,12 +53,12 @@ const Post = ({data, index}: props) => {
 
         </section>
       </Link>
-      {/* <button
+      <button
         className="post-upvote-button"
         onClick={upvote}
         >{votes}</button>
 
-      {
+      {/* {
         data.spotify_link ? <SpotifyOEmbed url={data.spotify_link}/> : null
       } */}
     </>
