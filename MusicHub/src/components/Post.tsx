@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import './../themes/Post.css';
 import SpotifyOEmbed from "./SpotifyOEmbed";
+import { formatDate } from '../utils/utils';
 
 interface props {
   data: DBPostData,
@@ -28,6 +29,7 @@ const Post = ({data, index}: props) => {
   }
 
   return (
+    <>
     <Link to={`/post/${data.id}`}>
       <section 
         id={`${index}`}
@@ -47,22 +49,23 @@ const Post = ({data, index}: props) => {
 
         <p
           className="post-date"
-          >Posted on: {data.created_at}</p>
+          >Posted on: {formatDate(data.created_at)}</p>
 
         <p
           className="post-upvotes"
           >Upvotes: </p>
 
-        <button
-          className="post-upvote-button"
-          onClick={upvote}
-          >{votes}</button>
-
-        {
-          data.spotify_link ? <SpotifyOEmbed url={data.spotify_link}/> : null
-        }
       </section>
     </Link>
+      <button
+        className="post-upvote-button"
+        onClick={upvote}
+        >{votes}</button>
+
+      {
+        data.spotify_link ? <SpotifyOEmbed url={data.spotify_link}/> : null
+      }
+    </>
   )
 }
 

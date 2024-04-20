@@ -13,3 +13,9 @@ export const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTex
     }
   })
 }
+
+export const formatDate = (dateString: string) => {
+  const date = new Date(dateString).toLocaleDateString();
+  const time = new Date(dateString).toLocaleTimeString();
+  return `${date} at ${time}`;
+}
