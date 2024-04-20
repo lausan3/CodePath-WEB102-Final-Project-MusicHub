@@ -3,12 +3,15 @@
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  
   width: var(--sidebar-width);
 }
 
 .sidebar-link {
   display: flex;
-    height: 4vh;
+  height: 4vh;
 
   padding: 10px 10px;
   margin: 30px 18px;
@@ -17,13 +20,13 @@
   border-radius: 10px;
 
   align-items: center;
+  cursor: pointer;
 
   transition: 
     background-color 250ms;
 }
 
 .sidebar-link:hover, .mini-sidebar-link:hover {
-  color: var(--text-secondary);
   background-color: var(--background-secondary);
 }
 
@@ -52,4 +55,8 @@
 .sidebar-btn:hover {
   background-color: var(--background-secondary);
   border: none;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
 }

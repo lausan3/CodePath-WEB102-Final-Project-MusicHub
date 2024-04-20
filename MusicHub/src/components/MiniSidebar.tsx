@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useTheme } from '../contexts/theme-context'
+
 import './../themes/MiniSidebar.css'
+import ThemeButton from './ThemeButton'
 
 const MiniSidebar = () => {
+  const [theme, toggleTheme] = useTheme();
+
   return (
     <div className="mini-sidebar">
       <Link className='mini-sidebar-link' to='/'>
@@ -14,6 +19,10 @@ const MiniSidebar = () => {
       <Link className='mini-sidebar-link' to='/explore'>
         <FontAwesomeIcon icon="magnifying-glass" className='sidebar-icon'/>
       </Link>
+
+      <a className="mini-sidebar-link mini-sidebar-bottom" onClick={toggleTheme}>
+        <ThemeButton/>
+      </a>
     </div>
   )
 }

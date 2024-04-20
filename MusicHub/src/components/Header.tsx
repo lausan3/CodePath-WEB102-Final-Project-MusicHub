@@ -1,6 +1,5 @@
 import { SetStateAction } from "react";
 
-import ThemeButton from "./ThemeButton";
 import ShowSidebarButton from "./ShowSidebarButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './../themes/Header.css'
@@ -21,7 +20,6 @@ const Header = ({showSidebar, setShowSidebar}: props) => {
         className="header-btn"
         />
       <h2>Music Hub</h2>
-      <ThemeButton/>
     </header>
   )
 }

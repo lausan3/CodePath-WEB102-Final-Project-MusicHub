@@ -9,7 +9,7 @@ interface props {
 }
 
 const ThemeButton = ({}: props) => {
-  const [theme, toggleTheme] = useTheme();
+  const [theme] = useTheme();
   
   const invertIcons = () => {
     const icons = document.querySelectorAll('.fa-solid');
@@ -29,9 +29,8 @@ const ThemeButton = ({}: props) => {
   }, [theme]);
   
   return (
-    <button
+    <div
       className="theme-btn"
-      onClick={toggleTheme}
     >
       {
         theme === 'light' ? 
@@ -45,7 +44,7 @@ const ThemeButton = ({}: props) => {
           icon="moon"
         />
       }
-    </button>
+    </div>
   )
 }
 

@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom'
-import './../themes/Sidebar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useTheme } from '../contexts/theme-context'
+
+import './../themes/Sidebar.css'
+import ThemeButton from './ThemeButton'
+
+
 
 const Sidebar = () => {
+  const [theme, toggleTheme] = useTheme();
+
   return (
     <div className="sidebar">
       <Link className='sidebar-link' to='/'>
@@ -17,6 +24,11 @@ const Sidebar = () => {
         <FontAwesomeIcon icon="magnifying-glass" className='sidebar-icon'/>
         <span className='sidebar-link-text fade-in'>Explore</span>
       </Link>
+
+      <a className="sidebar-link sidebar-bottom" onClick={toggleTheme}>
+        <ThemeButton/>
+        <span className='sidebar-link-text fade-in'>{theme == "dark" ? "Dark Mode" : "Light Mode"}</span>
+      </a>
     </div>
   )
 }

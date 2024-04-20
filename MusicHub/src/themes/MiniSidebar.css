@@ -1,4 +1,7 @@
 .mini-sidebar {
+  display: flex;
+  flex-direction: column;
+
   width: var(--sidebar-width);
 }
 
@@ -22,4 +25,8 @@
 
 .mini-sidebar-link:hover {
   background-color: var(--background-secondary);
+}
+
+.mini-sidebar-bottom {
+  margin-top: auto;
 }

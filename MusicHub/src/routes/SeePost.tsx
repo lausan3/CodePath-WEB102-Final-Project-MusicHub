@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom"
 
 import SpotifyOEmbed from "../components/SpotifyOEmbed"
 import LoadingPage from "../components/Loading"
+import { formatDate } from "../utils/utils"
 
 const SeePost = () => {
   const [data, setData] = useState<DBPostData>({id: 0,
@@ -82,7 +83,7 @@ const SeePost = () => {
 
       <p
         className="post-date"
-      >Posted on: {data.created_at}</p>
+      >Posted on: {formatDate(data.created_at)}</p>
 
       <p
         className="post-upvotes"
