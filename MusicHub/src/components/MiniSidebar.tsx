@@ -6,7 +6,7 @@ import './../themes/MiniSidebar.css'
 import ThemeButton from './ThemeButton'
 
 const MiniSidebar = () => {
-  const [theme, toggleTheme] = useTheme();
+  const [, toggleTheme] = useTheme();
 
   return (
     <div className="mini-sidebar">
