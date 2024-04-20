@@ -1,9 +1,10 @@
-import './../themes/Post.css';
 import { supabase } from '../client';
 import { DBPostData } from "../utils/interface";
-
-import SpotifyOEmbed from "./SpotifyOEmbed";
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
+
+import './../themes/Post.css';
+import SpotifyOEmbed from "./SpotifyOEmbed";
 
 interface props {
   data: DBPostData,
@@ -27,39 +28,41 @@ const Post = ({data, index}: props) => {
   }
 
   return (
-    <section 
-      id={`${index}`}
-      className="post"
-    >
-      <p
-        className="post-name"
-      >{data.poster_name}</p>
+    <Link to={`/post/${data.id}`}>
+      <section 
+        id={`${index}`}
+        className="post"
+        >
+        <p
+          className="post-name"
+          >{data.poster_name}</p>
 
-      <p
-        className="post-title"
-      >{data.title}</p>
+        <p
+          className="post-title"
+          >{data.title}</p>
 
-      <p
-        className="post-body"
-      >{data.body}</p>
+        <p
+          className="post-body"
+          >{data.body}</p>
 
-      <p
-        className="post-date"
-      >Posted on: {data.created_at}</p>
+        <p
+          className="post-date"
+          >Posted on: {data.created_at}</p>
 
-      <p
-        className="post-upvotes"
-      >Upvotes: </p>
+        <p
+          className="post-upvotes"
+          >Upvotes: </p>
 
-      <button
-        className="post-upvote-button"
-        onClick={upvote}
-      >{votes}</button>
+        <button
+          className="post-upvote-button"
+          onClick={upvote}
+          >{votes}</button>
 
-      {
-        data.spotify_link ? <SpotifyOEmbed url={data.spotify_link}/> : null
-      }
-    </section>
+        {
+          data.spotify_link ? <SpotifyOEmbed url={data.spotify_link}/> : null
+        }
+      </section>
+    </Link>
   )
 }
 

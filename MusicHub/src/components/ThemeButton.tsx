@@ -13,7 +13,7 @@ const ThemeButton = ({}: props) => {
   
   const invertIcons = () => {
     const icons = document.querySelectorAll('.fa-solid');
-    console.log(icons);
+
     icons.forEach(icon => {
       console.log(icon);
       icon.classList.add('invert');

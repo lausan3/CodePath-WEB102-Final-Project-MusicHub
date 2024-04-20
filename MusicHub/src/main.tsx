@@ -9,6 +9,7 @@ import Layout from './routes/Layout.tsx'
 import CreatePost from './routes/CreatePost.tsx'
 import Explore from './routes/Explore.tsx'
 import Forum from './routes/Forum.tsx'
+import SeePost from './routes/SeePost.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -16,8 +17,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index={true} element={<Forum/>} />
-          <Route index={false} path="/create" element={<CreatePost/>} />
-          <Route index={false} path="/explore" element={<Explore/>} />
+            <Route path="/post/:id" element={<SeePost/>} />
+          <Route path="/create" element={<CreatePost/>} />
+          <Route path="/explore" element={<Explore/>} />
         </Route>
       </Routes>
     </BrowserRouter>
