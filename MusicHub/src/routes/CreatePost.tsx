@@ -10,7 +10,7 @@ const CreatePost = () => {
 
   const createPost = async (event: React.MouseEvent<HTMLInputElement>) => {
     event.preventDefault();
-
+    
     const insertData: {poster_name?: string, title?: string, body?: string, spotify_link?: string, upvotes?: number} = {upvotes: 0};
     
     if (formData.title !== "") {
@@ -41,6 +41,7 @@ const CreatePost = () => {
       .from('Posts')
       .insert(insertData)
       .select();
+
 
     alert("Successfully created a post!");
   }

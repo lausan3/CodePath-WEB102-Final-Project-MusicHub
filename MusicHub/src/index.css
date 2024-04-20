@@ -15,20 +15,20 @@
 
 /* Light Theme */
 .light {
-  --background-primary: #E5D9F2;
+  --background-primary: #d7c8e7;
   --background-secondary: #CDC1FF;
   --background-tertiary: #7371FC;
   --text-primary: #0D1821;
-  --text-secondary: rgb(71, 26, 26);
+  --text-secondary: #471a1a;
 }
 
 /* Dark Theme */
 .dark {
   --background-primary: #665689;
-  --background-secondary: rgb(128, 114, 190);
+  --background-secondary: #8072be;
   --background-tertiary: #9391e9;
   --text-primary: #eddbf1;
-  --text-secondary: rgb(194, 178, 197);
+  --text-secondary: #c2b2c5;
 }
 
 @media (color-scheme: dark) {

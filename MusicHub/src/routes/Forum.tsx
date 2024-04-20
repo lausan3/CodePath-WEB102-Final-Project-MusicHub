@@ -1,6 +1,7 @@
 import { supabase } from "../client"
 import { useState, useEffect } from "react"
 import { DBPostData } from "../utils/interface";
+import LoadingPage from "../components/Loading";
 
 type Props = {}
 
@@ -22,8 +23,12 @@ const Forum = ({}: Props) => {
     fetchData().catch(console.error);
   }, [])
 
+  if (data.length <= 0) {
+    return <LoadingPage/>
+  }
+
   return (
-    <div className="main-ctn center">
+    <div className="main-ctn">
       <h1>Forum</h1>
       {
         data.length > 0 ? 

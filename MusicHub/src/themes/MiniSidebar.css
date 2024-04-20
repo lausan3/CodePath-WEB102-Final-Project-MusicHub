@@ -1,5 +1,5 @@
 .mini-sidebar {
-  width: 90px;
+  width: var(--sidebar-width);
 }
 
 .mini-sidebar-link {

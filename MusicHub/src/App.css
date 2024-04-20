@@ -8,7 +8,7 @@
 }
 
 :root {
-  --main-container-width: calc(100vw - var(--sidebar-width) - 150px);
+  --main-container-width: calc(100vw - var(--sidebar-width) - 350px);
 }
 
 .layout {
@@ -23,6 +23,8 @@
   display: flex;
   flex-direction: row;
 
+  height: 100vh;
+
   column-gap: 20px;
 }
 
@@ -36,6 +38,19 @@
   width: var(--main-container-width);
   box-sizing: border-box;
 }
+
+
+/* LOADING */
+
+.loading {
+  display: flex;
+  height: 70%;
+  width: 50%;
+
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 /* EXTRAS */
