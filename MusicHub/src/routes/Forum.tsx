@@ -2,6 +2,7 @@ import { supabase } from "../client"
 import { useState, useEffect } from "react"
 import { DBPostData } from "../utils/interface";
 import LoadingPage from "../components/Loading";
+import Post from "../components/Post";
 
 type Props = {}
 
@@ -34,12 +35,7 @@ const Forum = ({}: Props) => {
         data.length > 0 ? 
           data.map((post, index) => {
             return (
-              <div key={index}>
-                <h3>{post.poster_name}</h3>
-                <h3>{post.title}</h3>
-                <h3>{post.body}</h3>
-                <h3>Upvotes: {post.upvotes}</h3>
-              </div>
+              <Post data={post} index={index}/>
             )
           })
         :

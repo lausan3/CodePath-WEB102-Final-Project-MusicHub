@@ -5,11 +5,16 @@
 .mini-sidebar-link {
   display: flex;
   height: 4vh;
+  width: 30px;
 
-  padding: 20px 15px;
-  margin: 5px 15px;
+  padding: 10px 10px;
+  margin: 30px 15px;
+  margin-top: 10px;
 
   border-radius: 10px;
+
+  align-items: center;
+  justify-content: center;
   
   transition: 
     background-color 250ms;

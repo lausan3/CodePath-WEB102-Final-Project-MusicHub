@@ -8,10 +8,15 @@
 
 .sidebar-link {
   display: flex;
-  padding: 20px 15px;
-  margin: 5px 15px;
+    height: 4vh;
+
+  padding: 10px 10px;
+  margin: 30px 18px;
+  margin-top: 10px;
 
   border-radius: 10px;
+
+  align-items: center;
 
   transition: 
     background-color 250ms;
@@ -24,7 +29,6 @@
 
 .sidebar-link-text {
   margin-left: 20px;
-  height: 4vh;
 
   font-size: large;
 }
