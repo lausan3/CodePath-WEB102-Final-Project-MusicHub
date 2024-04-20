@@ -30,41 +30,37 @@ const Post = ({data, index}: props) => {
 
   return (
     <>
-    <Link to={`/post/${data.id}`}>
-      <section 
-        id={`${index}`}
-        className="post"
-        >
-        <p
-          className="post-name"
-          >{data.poster_name}</p>
+      <Link to={`/post/${data.id}`}>
+        <section 
+          id={`${index}`}
+          className="post"
+          >
+          <p
+            className="post-name"
+          >Posted by {data.poster_name}</p>
 
-        <p
-          className="post-title"
+          <p
+            className="post-title"
           >{data.title}</p>
 
-        <p
-          className="post-body"
-          >{data.body}</p>
-
-        <p
-          className="post-date"
+          <p
+            className="post-date"
           >Posted on: {formatDate(data.created_at)}</p>
 
-        <p
-          className="post-upvotes"
+          <p
+            className="post-upvotes"
           >Upvotes: </p>
 
-      </section>
-    </Link>
-      <button
+        </section>
+      </Link>
+      {/* <button
         className="post-upvote-button"
         onClick={upvote}
         >{votes}</button>
 
       {
         data.spotify_link ? <SpotifyOEmbed url={data.spotify_link}/> : null
-      }
+      } */}
     </>
   )
 }
