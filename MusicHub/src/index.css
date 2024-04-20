@@ -55,14 +55,12 @@ a:hover {
     background-color 250ms;
 }
 
+body {
+  margin: 0;
+}
 
 /* OLD VITE STUFF */
-
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-}
+/*
 
 
 h1 {
