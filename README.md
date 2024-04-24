@@ -4,7 +4,7 @@ Submitted by: **Anthony Lau**
 
 This web app: **Have you ever wanted to share your music taste with other people? Now you can with MusicHub!**
 
-Time spent: **10** hours spent in total
+Time spent: **10.5** hours spent in total
 
 ## Required Features
 

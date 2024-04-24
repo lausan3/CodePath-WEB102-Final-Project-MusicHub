@@ -8,7 +8,7 @@
 }
 
 :root {
-  --main-container-width: calc(100vw - var(--sidebar-width) - 350px);
+  --main-container-width: calc(100vw - var(--sidebar-width) - 300px);
 }
 
 .layout {

@@ -1,5 +1,6 @@
 import { supabase } from "../client"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 import PostForm from "../components/PostForm"
 import { PostData } from "../utils/interface";
@@ -7,6 +8,7 @@ import { handleChange } from "../utils/utils";
 
 const CreatePost = () => {
   const [formData, setFormData] = useState<PostData>({poster_name: "", title: "", body: "", spotify_link: "", upvotes: 0});
+  const navigate = useNavigate();
 
   const createPost = async (event: React.MouseEvent<HTMLInputElement>) => {
     event.preventDefault();
@@ -44,6 +46,8 @@ const CreatePost = () => {
 
 
     alert("Successfully created a post!");
+
+    navigate("/");
   }
 
   return (
