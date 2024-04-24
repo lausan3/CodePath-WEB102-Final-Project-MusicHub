@@ -35,12 +35,12 @@ const ThemeButton = ({}: props) => {
       {
         theme === 'light' ? 
         <FontAwesomeIcon 
-          className="theme-btn-icon"
+          className="theme-btn-icon sidebar-icon"
           icon="sun"
         />
         :
         <FontAwesomeIcon
-          className="theme-btn-icon" 
+          className="theme-btn-icon sidebar-icon" 
           icon="moon"
         />
       }

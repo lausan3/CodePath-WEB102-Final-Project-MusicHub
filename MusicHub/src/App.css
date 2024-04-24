@@ -1,6 +1,6 @@
 #root {
-  width: 97vw;
-  height: 100vh;
+  /* width: 97vw;
+  height: 100vh; */
   display: flex;
 
   text-align: center;
@@ -8,12 +8,14 @@
 }
 
 :root {
-  --main-container-width: calc(80vw - var(--sidebar-width));
+  --main-container-width: calc(100% - var(--sidebar-width));
 }
 
 .layout {
   display: flex;
   flex-direction: column;
+
+  align-items: center;
 
   height: 100vh;
   width: 100vw;
@@ -22,6 +24,13 @@
 .layout-bottom {
   display: flex;
   flex-direction: row;
+
+  margin-top: 75px;
+
+  min-width: 320px;
+  max-width: 1160px;
+
+  width: 100%;
 
   height: 100vh;
 
@@ -34,7 +43,9 @@
 .main-ctn {
   display: flex;
   flex-direction: column;
+
   margin: 15px 0px;
+  margin-left: var(--sidebar-width);
   width: var(--main-container-width);
   box-sizing: border-box;
 

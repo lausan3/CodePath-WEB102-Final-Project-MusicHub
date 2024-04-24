@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 import './../themes/Post.css';
-// import SpotifyOEmbed from "./SpotifyOEmbed";
 import { formatDate } from '../utils/utils';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface props {
   data: DBPostData,
@@ -29,39 +29,47 @@ const Post = ({data, index}: props) => {
   }
 
   return (
-    <>
-      <Link to={`/post/${data.id}`}>
-        <section 
-          id={`${index}`}
-          className="post"
-          >
+    <div
+      key={index}
+      className='post'
+    >
+      <Link 
+        to={`/post/${data.id}`}
+        className='post-ctn'
+      >
+        <div className="info">
+
           <p
             className="post-name"
-          >Posted by {data.poster_name}</p>
+          >Poster: {data.poster_name}</p>
+        </div>
 
-          <p
-            className="post-title"
-          >{data.title}</p>
+        <p
+          className="post-title"
+        >{data.title}</p>
 
-          <p
-            className="post-date"
-          >Posted on: {formatDate(data.created_at)}</p>
+        <p
+        className="post-body"
+        >{data.body}</p>
 
-          <p
-            className="post-upvotes"
-          >Upvotes: </p>
 
-        </section>
       </Link>
-      <button
-        className="post-upvote-button"
-        onClick={upvote}
-        >{votes}</button>
-
-      {/* {
-        data.spotify_link ? <SpotifyOEmbed url={data.spotify_link}/> : null
-      } */}
-    </>
+      <div className="bottom">
+        <span
+          className="post-date"
+        >{formatDate(data.created_at)}</span>
+        <button
+          className="post-upvote-button"
+          onClick={upvote}
+        >
+          <FontAwesomeIcon
+          className="post-upvote"
+          icon="heart"
+          ></FontAwesomeIcon>
+          {votes}
+        </button>
+      </div>
+    </div>
   )
 }
 
