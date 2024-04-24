@@ -25,7 +25,7 @@ const Sidebar = () => {
         <span className='sidebar-link-text fade-in'>Explore</span>
       </Link>
 
-      <a className="sidebar-link sidebar-bottom" onClick={toggleTheme}>
+      <a className="sidebar-link" onClick={toggleTheme}>
         <ThemeButton/>
         <span className='sidebar-link-text fade-in'>{theme == "dark" ? "Dark Mode" : "Light Mode"}</span>
       </a>

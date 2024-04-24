@@ -1,10 +1,12 @@
-import { DBPostData } from "../utils/interface"
+import { DBCommentData, DBPostData } from "../utils/interface"
 import { supabase } from "../client"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
 import SpotifyOEmbed from "../components/SpotifyOEmbed"
 import LoadingPage from "../components/Loading"
+import CommentForm from "../components/CommentForm"
+import Comment from "../components/Comment"
 import { formatDate } from "../utils/utils"
 
 const SeePost = () => {
@@ -16,6 +18,7 @@ const SeePost = () => {
     upvotes: 0,
     created_at: ""
   });
+  const [comments, setComments] = useState<DBCommentData[]>([]);
   const [loading, setLoading] = useState(true);
   const [votes, setVotes] = useState(0);
   const params = useParams();
@@ -26,14 +29,23 @@ const SeePost = () => {
     const get = async () => {
       setLoading(true);
 
-      const newData = await supabase
+      const newPostData = await supabase
         .from("Posts")
         .select()
         .eq("id", postId);
 
-      if (newData.error == null) {
-        setData(newData.data[0]);
-        setVotes(newData.data[0]["upvotes"]);
+      if (!newPostData.error) {
+        setData(newPostData.data[0]);
+        setVotes(newPostData.data[0]["upvotes"]);
+      }
+
+      const newCommentData = await supabase
+        .from("Comments")
+        .select()
+        .eq("post_id", postId);
+
+      if (!newCommentData.error) {
+        setComments(newCommentData.data);
       }
 
       setLoading(false);
@@ -97,6 +109,20 @@ const SeePost = () => {
       {
         data.spotify_link ? <SpotifyOEmbed url={data.spotify_link}/> : null
       }
+
+      <div className="add-comment-ctn">
+        <CommentForm id={postId!}/>
+      </div>
+
+      <div className="comment-list">
+        {
+          comments.length > 0 ? comments.map((comment, index) => {
+            return <Comment data={comment} key={index}/>
+          })
+          :
+          <p>No comments yet, why don't you add one?</p>
+        }
+      </div>
     </div>
   )
 }

@@ -8,7 +8,7 @@
 }
 
 :root {
-  --main-container-width: calc(100vw - var(--sidebar-width) - 300px);
+  --main-container-width: calc(80vw - var(--sidebar-width));
 }
 
 .layout {
@@ -37,6 +37,8 @@
   margin: 15px 0px;
   width: var(--main-container-width);
   box-sizing: border-box;
+
+  align-items: center;
 }
 
 

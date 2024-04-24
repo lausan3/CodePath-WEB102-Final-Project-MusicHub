@@ -20,7 +20,7 @@ const MiniSidebar = () => {
         <FontAwesomeIcon icon="magnifying-glass" className='sidebar-icon'/>
       </Link>
 
-      <a className="mini-sidebar-link mini-sidebar-bottom" onClick={toggleTheme}>
+      <a className="mini-sidebar-link" onClick={toggleTheme}>
         <ThemeButton/>
       </a>
     </div>

@@ -14,7 +14,7 @@ const Forum = ({}: Props) => {
       const data = await supabase
         .from("Posts")
         .select()
-        .order("id");
+        .order("created_at", {ascending: false});
 
       if (data.error == null) {
         setData(data.data);

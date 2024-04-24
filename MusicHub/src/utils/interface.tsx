@@ -9,6 +9,7 @@ export interface PostData {
 export interface CommentData {
   poster_name: string,
   body: string,
+  post_id: string
 }
 
 export interface DBPostData {
@@ -27,4 +28,5 @@ export interface DBCommentData {
   body: string,
   upvotes: number,
   created_at: string,
+  post_id: number
 }
