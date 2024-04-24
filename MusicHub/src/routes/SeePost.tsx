@@ -1,7 +1,7 @@
 import { DBCommentData, DBPostData } from "../utils/interface"
 import { supabase } from "../client"
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 import SpotifyOEmbed from "../components/SpotifyOEmbed"
 import LoadingPage from "../components/Loading"
@@ -109,6 +109,10 @@ const SeePost = () => {
       {
         data.spotify_link ? <SpotifyOEmbed url={data.spotify_link}/> : null
       }
+
+      <div className="edit-ctn">
+        <Link to={`/edit/${postId}`}>Edit this Post</Link>
+      </div>
 
       <div className="add-comment-ctn">
         <CommentForm id={postId!}/>
