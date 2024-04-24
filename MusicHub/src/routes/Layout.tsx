@@ -8,7 +8,7 @@ import MiniSidebar from "../components/MiniSidebar";
 import Header from "../components/Header";
 
 const Layout = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(true);
 
   return (
     <ThemeProvider>      

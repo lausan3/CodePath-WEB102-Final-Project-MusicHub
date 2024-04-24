@@ -4,6 +4,7 @@ import { useState } from "react"
 import './../themes/Comments.css'
 import { CommentData } from "../utils/interface";
 import { handleChange } from "../utils/utils";
+import { useNavigate } from "react-router-dom";
 
 interface props {
   id: string
@@ -11,6 +12,7 @@ interface props {
 
 const CommentForm = ({id}: props) => {
   const [commentForm, setCommentForm] = useState<CommentData>({poster_name: "", body: "", post_id: id});
+  const navigate = useNavigate();
 
   const addComment = async (event: React.MouseEvent<HTMLInputElement>) => {
     event.preventDefault();
@@ -36,7 +38,7 @@ const CommentForm = ({id}: props) => {
 
     alert("Successfully added a comment!");
 
-    window.location.reload();
+    navigate(`/post/${id}`)
   }
 
   return (

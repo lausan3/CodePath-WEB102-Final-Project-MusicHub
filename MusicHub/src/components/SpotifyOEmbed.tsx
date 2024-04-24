@@ -29,8 +29,8 @@ const SpotifyOEmbed = ({url}: props) => {
         <iframe 
           style={{borderRadius: "12px"}} 
           src={iframeUrl}
-          width="300" 
-          height="352" 
+          width="400" 
+          height="80" 
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
           loading="lazy"
         >
