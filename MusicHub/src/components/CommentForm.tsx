@@ -38,7 +38,7 @@ const CommentForm = ({id}: props) => {
 
     alert("Successfully added a comment!");
 
-    navigate(`/post/${id}`)
+    navigate(`/`)
   }
 
   return (

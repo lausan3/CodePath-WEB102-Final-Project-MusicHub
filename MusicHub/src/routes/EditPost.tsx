@@ -49,13 +49,12 @@ const EditPost = ({}: Props) => {
     
     await supabase
       .from('Posts')
-      .insert(insertData)
-      .select();
-
+      .update(insertData)
+      .eq("id", postId);
 
     alert("Successfully created a post!");
 
-    navigate(`/posts/${postId}`);
+    navigate(`/`);
   }
 
   const deletePost = async (event: React.MouseEvent<HTMLButtonElement>) => {
