@@ -18,8 +18,13 @@
   --background-primary: #d7c8e7;
   --background-secondary: #CDC1FF;
   --background-tertiary: #7371FC;
+
   --text-primary: #0D1821;
   --text-secondary: #471a1a;
+
+  --delete-primary: rgb(207, 3, 3);
+  --delete-secondary: rgb(175, 23, 23);
+  --delete-text: #FFFFFF;
 }
 
 /* Dark Theme */
@@ -27,17 +32,27 @@
   --background-primary: #665689;
   --background-secondary: #8072be;
   --background-tertiary: #9391e9;
+
   --text-primary: #eddbf1;
   --text-secondary: #c2b2c5;
+
+  --delete-primary: rgb(201, 1, 1);
+  --delete-secondary: rgb(153, 1, 1);
+  --delete-text: #FFFFFF;
 }
 
 @media (color-scheme: dark) {
   :root {
-    --background-primary: #333333;
-    --background-secondary: #2c2c2c;
-    --background-tertiary: #262626;
-    --text-primary: #ffffff;
-    --text-secondary: #cccccc;
+    --background-primary: #665689;
+    --background-secondary: #8072be;
+    --background-tertiary: #9391e9;
+  
+    --text-primary: #eddbf1;
+    --text-secondary: #c2b2c5;
+  
+    --delete-primary: ;
+    --delete-secondary: ;
+    --delete-text: ;
   }
 }
 

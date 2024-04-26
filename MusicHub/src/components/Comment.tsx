@@ -29,9 +29,9 @@ const Comment = ({data, key}: Props) => {
       key={key}
       className="comment-ctn"
     >
-      <p>Posted by {data.poster_name}</p>
+      <p>{data.poster_name}</p>
       <p>{data.body}</p>
-      <p>Posted by {formatDate(data.created_at)}</p>
+      <p>Posted on {formatDate(data.created_at)}</p>
       <button
         onClick={upvote}
       >{votes}</button>

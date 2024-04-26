@@ -70,8 +70,10 @@ const EditPost = ({}: Props) => {
 
   return (
     <div
-
+      className="main-ctn"
     >
+      <h2>Edit Post {postId}</h2>
+      <br/>
       <PostForm data={formData} handleChange={(event) => handleChange(event, setFormData)} submit={updatePost}/>
       <button
         className="edit-delete-btn"

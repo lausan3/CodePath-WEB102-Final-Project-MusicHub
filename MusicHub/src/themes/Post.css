@@ -66,10 +66,20 @@
   font-family: 'Montserrat';
   
   color: var(--text-primary);
-  background-color: var(--background-secondary);
+  background-color: var(--background-tertiary);
+
+  border-radius: 5px;
   border: 0px;
 
-  padding: 5px 5px;
+  padding: 5px 10px;
+}
+
+.post-upvote-button:hover {
+  background-color: var(--background-primary);
+}
+
+.post-upvote-button:active {
+  background-color: var(--background-tertiary);
 }
 
 .info {

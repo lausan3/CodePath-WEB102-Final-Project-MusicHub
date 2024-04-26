@@ -1,3 +1,19 @@
 .edit-delete-btn {
+  border: 0;
+  border-radius: 10px;
+  background-color: var(--delete-primary);
+  color: var(--delete-text);
 
+  font-size: large;
+
+  padding: 15px 50px;
+  margin-top: 20px;
+}
+
+.edit-delete-btn:hover {
+  background-color: var(--delete-secondary);
+}
+
+.edit-delete-btn:active {
+  background-color: var(--delete-primary);
 }

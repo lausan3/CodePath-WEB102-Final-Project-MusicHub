@@ -8,6 +8,8 @@ import LoadingPage from "../components/Loading"
 import CommentForm from "../components/CommentForm"
 import Comment from "../components/Comment"
 import { formatDate } from "../utils/utils"
+import './../themes/SeePost.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const SeePost = () => {
   const [data, setData] = useState<DBPostData>({id: 0,
@@ -81,51 +83,67 @@ const SeePost = () => {
 
   return (
     <div className="main-ctn">
-      <p
-        className="post-name"
-      >{data.poster_name}</p>
+      <div className="see-post-ctn">
+        <span
+          className="see-post-title"
+        >{data.title}</span>
 
-      <p
-        className="post-title"
-      >{data.title}</p>
+        <div className="top-info">
+          <span
+            className="see-post-name"
+          >{data.poster_name}</span>
 
-      <p
-        className="post-body"
-      >{data.body}</p>
+          <span
+            className="see-post-date"
+          >Posted on: {formatDate(data.created_at)}</span>
+        </div>
 
-      <p
-        className="post-date"
-      >Posted on: {formatDate(data.created_at)}</p>
 
-      <p
-        className="post-upvotes"
-      >Upvotes: </p>
+        <p
+          className="see-post-body"
+        >{data.body}</p>
 
-      <button
-        className="post-upvote-button"
-        onClick={upvote}
-      >{votes}</button>
 
-      {
-        data.spotify_link ? <SpotifyOEmbed url={data.spotify_link}/> : null
-      }
 
-      <div className="edit-ctn">
-        <Link to={`/edit/${postId}`}>Edit this Post</Link>
-      </div>
+        <button
+          className="see-post-upvote-button"
+          onClick={upvote}
+        >
+          <span
+            className="see-post-upvote"
+          >
+            <FontAwesomeIcon icon={"heart"}/>
+          </span>
+          {votes}
+        </button>
 
-      <div className="add-comment-ctn">
-        <CommentForm id={postId!}/>
-      </div>
-
-      <div className="comment-list">
         {
-          comments.length > 0 ? comments.map((comment, index) => {
-            return <Comment data={comment} key={index}/>
-          })
-          :
-          <p>No comments yet, why don't you add one?</p>
+          data.spotify_link ? <SpotifyOEmbed url={data.spotify_link}/> : null
         }
+
+        <div className="edit-ctn">
+          <Link to={`/edit/${postId}`}>Edit this Post</Link>
+        </div>
+        
+        <br/>
+
+        <div className="add-comment-ctn">
+          <h3>Add a coment to this post!</h3>
+          <CommentForm id={postId!}/>
+        </div>
+        
+        <br/>
+
+        <div className="comment-list">
+          <h3>Comments:</h3>
+          {
+            comments.length > 0 ? comments.map((comment, index) => {
+              return <Comment data={comment} key={index}/>
+            })
+            :
+            <p>No comments yet, why don't you add one?</p>
+          }
+        </div>
       </div>
     </div>
   )

@@ -53,7 +53,6 @@ const CommentForm = ({id}: props) => {
           placeholder="Enter your name (optional)"
         />
         <br/>
-        <br/>
 
         <textarea 
           rows={3} 
@@ -63,7 +62,6 @@ const CommentForm = ({id}: props) => {
           onChange={(event) => handleChange(event, setCommentForm)}
           placeholder="Text (required)"
           />
-        <br/>
         <br/>
 
 
