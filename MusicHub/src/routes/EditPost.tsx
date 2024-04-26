@@ -54,7 +54,7 @@ const EditPost = ({}: Props) => {
 
     alert("Successfully created a post!");
 
-    navigate(`/`);
+    navigate(`/post/${postId}`);
   }
 
   const deletePost = async (event: React.MouseEvent<HTMLButtonElement>) => {

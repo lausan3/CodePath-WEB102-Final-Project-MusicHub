@@ -31,7 +31,9 @@ const Comment = ({data, key}: Props) => {
     >
       <p>{data.poster_name}</p>
       <p>{data.body}</p>
-      <p>Posted on {formatDate(data.created_at)}</p>
+      <p
+        style={{color: 'var(--text-secondary)'}}
+      >Posted on {formatDate(data.created_at)}</p>
       <button
         onClick={upvote}
       >{votes}</button>
