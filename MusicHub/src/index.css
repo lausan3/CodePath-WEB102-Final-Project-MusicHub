@@ -24,7 +24,6 @@
 
   --delete-primary: rgb(207, 3, 3);
   --delete-secondary: rgb(175, 23, 23);
-  --delete-text: #FFFFFF;
 }
 
 /* Dark Theme */
@@ -38,7 +37,6 @@
 
   --delete-primary: rgb(201, 1, 1);
   --delete-secondary: rgb(153, 1, 1);
-  --delete-text: #FFFFFF;
 }
 
 @media (color-scheme: dark) {
@@ -50,9 +48,8 @@
     --text-primary: #eddbf1;
     --text-secondary: #c2b2c5;
   
-    --delete-primary: ;
-    --delete-secondary: ;
-    --delete-text: ;
+    --delete-primary: rgb(201, 1, 1);
+    --delete-secondary: rgb(153, 1, 1);
   }
 }
 

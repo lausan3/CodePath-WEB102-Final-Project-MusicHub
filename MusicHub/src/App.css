@@ -8,15 +8,26 @@
 }
 
 :root {
+  --sidebar-width: 12vw;
   --main-container-width: calc(100% - var(--sidebar-width));
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --main-container-width: 80%;
+  }
+
+  .main-ctn {
+    flex: 1;
+  }
 }
 
 .layout {
   display: flex;
   flex-direction: column;
-
+  
   align-items: center;
-
+  
   height: 100vh;
   width: 100vw;
 }

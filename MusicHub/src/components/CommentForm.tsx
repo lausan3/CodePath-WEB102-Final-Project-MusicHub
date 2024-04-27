@@ -41,8 +41,9 @@ const CommentForm = ({id}: props) => {
 
   return (
     <div className="comment-form-ctn">
-      <form className='create-form'>
+      <form className='comment-form'>
         <input 
+          className="form-input"
           type="text" 
           id="poster_name" 
           name="poster_name" 
@@ -50,9 +51,9 @@ const CommentForm = ({id}: props) => {
           onChange={(event) => handleChange(event, setCommentForm)} 
           placeholder="Enter your name (optional)"
         />
-        <br/>
 
         <textarea 
+          className="form-input"
           rows={3} 
           cols={50} 
           name="body" 
@@ -60,10 +61,14 @@ const CommentForm = ({id}: props) => {
           onChange={(event) => handleChange(event, setCommentForm)}
           placeholder="Text (required)"
           />
-        <br/>
 
 
-        <input type="submit" value="Submit" onClick={addComment} />
+        <input 
+          className="comment-submit"
+          type="submit" 
+          value="Submit" 
+          onClick={addComment} 
+          />
       </form>
     </div>
   )

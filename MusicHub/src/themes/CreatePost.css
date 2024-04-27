@@ -10,6 +10,8 @@
 .left-block {
   display: flex;
   flex-direction: column;
+
+  margin-right: 15px;
 }
 
 .form-input {
@@ -29,6 +31,7 @@
 
 .form-input::placeholder {
   color: var(--text-primary);
+  overflow: hidden;
 }
 
 .form-input:focus {
@@ -43,7 +46,7 @@
 
   font-size: large;
 
-  padding: 15px 150px;
+  padding: 15px 100px;
   margin-top: 20px;
 }
 
@@ -53,4 +56,10 @@
 
 .submit:active {
   background-color: var(--background-secondary);
+}
+
+@media screen and (max-width: 800px) {
+  .create-ctn {
+    flex-direction: column;
+  }
 }

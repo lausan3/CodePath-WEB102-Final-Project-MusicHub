@@ -128,7 +128,7 @@ const SeePost = () => {
         <br/>
 
         <div className="add-comment-ctn">
-          <h3>Add a coment to this post!</h3>
+          <h3>Add a comment to this post!</h3>
           <CommentForm id={postId!}/>
         </div>
         

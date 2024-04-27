@@ -1,3 +1,48 @@
-.comment-form-ctn {
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  padding: 15px 20px;
+  margin: 5px 0px;
+
+  font-family: 'Montserrat';
+  font-size: medium;
+
+  background-color: var(--background-secondary);
+  caret-color: var(--text-primary);
   
+  border-radius: 5px;
+  
+  border: 0;
+}
+
+.form-input::placeholder {
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.form-input:focus {
+  outline: var(--background-tertiary) solid 2px;
+}
+
+.comment-submit {
+  border: 0;
+  border-radius: 10px;
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+
+  font-size: large;
+
+  padding: 10px 30px;
+  margin-top: 20px;
+}
+
+.comment-submit:hover {
+  background-color: var(--background-tertiary);
+}
+
+.comment-submit:active {
+  background-color: var(--background-secondary);
 }
