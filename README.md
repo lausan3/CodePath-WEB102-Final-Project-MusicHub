@@ -4,7 +4,7 @@ Submitted by: **Anthony Lau**
 
 This web app: **Have you ever wanted to share your music taste with other people? Now you can with MusicHub!**
 
-Time spent: **15.5** hours spent in total
+Time spent: **16** hours spent in total
 
 ## Required Features
 
@@ -41,7 +41,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./MusicHub/public/WEB102FinalShowcase.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LiceCAP  
