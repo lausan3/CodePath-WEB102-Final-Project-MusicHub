@@ -2,6 +2,7 @@ import { useState } from "react";
 import { DBCommentData } from "../utils/interface"
 import { formatDate } from "../utils/utils"
 import { supabase } from "../client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Props {
   data: DBCommentData,
@@ -35,8 +36,16 @@ const Comment = ({data, key}: Props) => {
         style={{color: 'var(--text-secondary)'}}
       >Posted on {formatDate(data.created_at)}</p>
       <button
-        onClick={upvote}
-      >{votes}</button>
+          className="see-post-upvote-button"
+          onClick={upvote}
+        >
+          <span
+            className="see-post-upvote"
+          >
+            <FontAwesomeIcon icon={"heart"}/>
+          </span>
+          {votes}
+        </button>
     </div>
   )
 }

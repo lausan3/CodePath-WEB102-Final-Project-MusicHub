@@ -1,0 +1,55 @@
+.explore-form {
+  margin-top: 20px;
+  
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+}
+
+.explore-form-search {
+  padding: 15px 20px;
+  margin: 5px 8px;
+  
+  font-family: 'Montserrat';
+  font-size: medium;
+  
+  background-color: var(--background-secondary);
+  caret-color: var(--text-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+  
+  border-radius: 5px;
+  
+  border: 0;
+}
+
+.explore-form-search::placeholder {
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.explore-form-search:focus {
+  outline: none;
+}
+
+.explore-form-submit {
+  margin-bottom: 20px;
+  border: 0;
+  border-radius: 10px;
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  
+  font-size: large;
+
+  padding: 15px 100px;
+  margin-top: 10px;
+}
+
+.explore-form-submit:hover {
+  background-color: var(--background-tertiary);
+}
+
+.explore-form-submit:active {
+  background-color: var(--background-secondary);
+}

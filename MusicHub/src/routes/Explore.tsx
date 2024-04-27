@@ -94,12 +94,12 @@ const Explore = ({}: Props) => {
           <option value="oldest">Oldest</option>
         </select>
 
-        <button
-          className="explore-form-submit"
-          type="submit"
-          onClick={handleFormSubmit}
-        >Filter</button>
       </div>
+      <button
+        className="explore-form-submit"
+        type="submit"
+        onClick={handleFormSubmit}
+      >Filter</button>
 
       <div className="explore-post-view">
         {
